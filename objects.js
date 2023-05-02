@@ -6,12 +6,21 @@ const people = [
   { name: 'Charlie', age: 14 },
   { name: 'Max', age: 19 },
 ];
-function getNames(people) {
-  return people.filter(person => person.age >= 18)
-              .map(person => person.name);
+
+function getNames (people){
+  const adult=people.filter(person=>person.age>=18);
+  const adultNames=adult.map(person=>person.names);
+  return adultNames
 }
-const adultNames = getNames(people);
-console.log(adultNames);
+const adultNames=getNames(people)
+console.log(adultNames)
+
+// function getNames(people) {
+//   return people.filter(person => person.age >= 18)
+//               .map(person => person.name);
+// }
+// const adultNames = getNames(people);
+// console.log(adultNames);
 
 // Write a function that takes an array of objects, where each object represents a product with a name, price, and category property.
 // The function should return an object that groups the products by their categories, with the category names as keys and the arrays of products as values.
@@ -36,7 +45,8 @@ const objectsName = (products) => {
   const grouped = objectsName(products);
   console.log(grouped);
 
-// Given an array of objects, where each object represents a student with a name and an array of scores, write a function that returns a new array containing the names of all students whose average score is greater than or equal to 85.
+// Given an array of objects, where each object represents a student with a name and an array of scores,
+//  write a function that returns a new array containing the names of all students whose average score is greater than or equal to 85.
 const students = [
   { name: 'John', scores: [90, 80, 85] },
   { name: 'Jane', scores: [95, 92, 88] },
@@ -44,6 +54,10 @@ const students = [
   { name: 'Jill', scores: [85, 90, 84] },
 ];
 
+
+// const highscore=(students)=>{
+//   students.forEach(item)
+// }
 
 function topstudents(students) {
   const topStudents = [];
